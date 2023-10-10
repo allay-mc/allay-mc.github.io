@@ -1,0 +1,114 @@
+* {
+  /* --primary: #db1f29; */
+  --primary: cornflowerblue;
+  --secondary: white;
+  font-family: 'Jost', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  background-image: url('assets/background.webp');
+  color: var(--secondary);
+  height: 90vh;
+  padding-bottom: 5vh;
+}
+
+button.mcbtn {
+  border-color: #70B237;
+  background-color: #477A1E;
+  margin: 1vh;
+  height: 10vh;
+  width: 90vw;
+  font-size: 2.5vh;
+  color: var(--secondary);
+}
+
+footer {
+  background-color: #222;
+  color: var(--secondary);
+  height: 10vh;
+  font-size: 2.5vh;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a:not(.phantom) {
+  color: aquamarine;
+}
+
+footer a:hover:not(.phantom) {
+  color: mediumaquamarine;
+}
+
+.material-symbols-outlined,
+.icon {
+  vertical-align: middle;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon {
+  height: 2.5vh;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.box {
+  width: 20vw;
+  height: 20vw;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-radius: 20%;
+  border-style: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition-duration: .1s;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  transistion-property: transform;
+  transition-duration: .4s;
+}
+
+#logo {
+  width: 20vh;
+}
+
+#title {
+  font-size: 7.5vh;
+  margin: 1vh;
+}
+
+[role="doc-subtitle"] {
+  font-size: 2.5vh;
+  margin-bottom: 2vh;
+}
+
+@media (prefers-reduced-motion) {
+  #logo {
+    content: url('assets/allay.png');
+  }
+
+  .box:hover {
+    transform: none;
+    transition-property: none;
+    transition-duration: none;
+  }
+
+}

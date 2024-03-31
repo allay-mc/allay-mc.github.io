@@ -3,85 +3,134 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="description" content="Your Personal Creator Assistant" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
   <title>Allay</title>
   <link rel="icon" href="assets/allay.png" />
   <link rel="stylesheet" href="style.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Montserrat:wght@300;600&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="nord.css" />
+  <script defer src="script.js"></script>
 </head>
 
 <body>
+  <header>
+    <nav>
+      <img id="icon" src="assets/allay.png" />
+      <div id="links">
+        <ul>
+          <li><a href="#download" tabindex="1">Download</a></li>
+          <li><a href="https://allay-mc.github.io/allay/" tabindex="2">Manual</a></li>
+          <li><a href="#community" tabindex="3">Community</a></li>
+        </ul>
+        <div id="nav-buttons">
+          <button id="btnTheme" title="Theme"><i data-lucide="sun-moon"></i></button>
+          <button id="btnRepo" title="Repository"><i data-lucide="github"></i></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section id="banner">
+    <a href="https://discord.gg/dv3pXFZbHQ">Join the Discord server</a> and claim the <b>OG role</b> assigned to the
+    first <b>50</b> people joining!
+  </section>
   <main>
-    <img id="logo" class="center" src="assets/allay.gif" />
-    <h1 id="title">Allay</h1>
-    <div role="doc-subtitle">Your Personal Creator Assistant</div>
-    <div class="boxes">
-      <form action="/docs" method="get">
-        <button class="box" type="submit">
-          <span class="material-symbols-outlined">
-            menu_book
-          </span>
-          <br />
-          Docs
-        </button>
-      </form>
-      <form action="https://github.com/allay-mc/allay" method="get">
-        <button class="box" type="submit">
-          <span class="material-symbols-outlined">
-            data_object
-          </span>
-          <br />
-          Code
-        </button>
-      </form>
-      <form action="https://github.com/allay-mc/scripts" method="get">
-        <button class="box" type="submit">
-          <span class="material-symbols-outlined">
-            extension
-          </span>
-          <br />
-          Scripts
-        </button>
-      </form>
+    <div class="grid">
+      <img id="logo" src="assets/allay.png" />
+      <div class="title">
+        <h1>Allay</h1>
+        <div class="subtitle" role="doc-subtitle">Your Personal Creator Assistant</div>
+      </div>
     </div>
-    <br />
-    <form action="/docs/installation.html" method="get">
-      <button class="mcbtn">
-        <span class="material-symbols-outlined">download</span>
-        Install
-      </button>
-    </form>
-    <form action="about:blank" method="get">
-      <button class="mcbtn">
-        <span class="material-symbols-outlined">communities</span>
-        Contribute
-      </button>
-    </form>
+    <hr />
+    <p>
+      Allay is a command-line application which can be used to create add-ons for Minecraft: Bedrock Edition. It's goal
+      is to take over the boring work you would do when manually developing an add-on such as generating UUIDs and
+      handling localization.
+    </p>
+    <p>
+      When working with Allay you work on the source files and Allay takes them and transforms them in the way
+      you need it so your add-on can be imported into Minecraft and published. This allows you to quickly build
+      your next big project.
+    </p>
+    <section id="download">
+      <button id="download-button">Download latest version</button>
+    </section>
+    <section id="badges">
+      <img alt="GitHub Release"
+        src="https://img.shields.io/github/v/release/allay-mc/allay?sort=semver&display_name=release&style=for-the-badge">
+      <img alt="GitHub Downloads (all assets, all releases)"
+        src="https://img.shields.io/github/downloads/allay-mc/allay/total?style=for-the-badge">
+    </section>
+    <hr />
+    <section>
+      <h2>Features Overview</h2>
+      <section>
+        <h3>Plugins</h3>
+        <p>
+          Next to built-in extensions like automatic manifest and UUID generation, plugins can be used to
+          extend your project infrastructure. Plugins are just programs that can be written in any programming
+          language. They make use of command-line arguments or environment variables set by Allay when invoking
+          the plugins. The <a href="https://github.com/allay-mc/plugins">plugins</a> repository provides useful
+          plugins that may come in handy for your. There are also plugins created by the community. Browse the
+          <a href="https://github.com/topics/allay-plugins">allay-plugins</a> topic on GitHub to find some!
+        </p>
+        <p>
+          The manual provides an extensive introduction and explaination for using and developing plugins for
+          Allay.
+        </p>
+      </section>
+      <section>
+        <h3>Batteries Included</h3>
+        Allay comes with a lot of functionalities built-in:
+        <ul>
+          <li>UUID generation</li>
+          <li><code>manifest.json</code> generation</li>
+          <li>Localization handling</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Rapid Development</h3>
+        <p>
+          Allay's command-line interface provides a large set of commands like <code>watch</code> which
+          automatically rebuilds your project on changes in your source files. You can share your built
+          project to your other devices by using the <code>share</code> command to for instance ensure
+          that your project works both for Desktop and Mobile.
+        </p>
+        <p>
+          Allay is capable of building your projects in a few milliseconds when using less time-consuming
+          plugins.
+        </p>
+      </section>
+    </section>
+    <section>
+      <h2 id="community">Community</h2>
+      <p>
+        Let's build a community! <a href="https://discord.gg/dv3pXFZbHQ">Join oin the Discord</a> server,
+        ask questions and help others.
+      </p>
+    </section>
   </main>
   <footer>
-    <p>
-      <span class="material-symbols-outlined">code</span>
+    <p class="vertical-align">
+      <i data-lucide="code" role="img" aria-label="Coded"></i>
       with
-      &#10084;&#65039;
-      in
-      <a class="phantom" href="https://www.rust-lang.org/">
-        <img class="icon" src="https://www.rust-lang.org/logos/rust-logo-32x32.png" alt="Rust" />
-      </a>
+      <i data-lucide="heart" role="img" aria-label="love"></i>
       by
-      <a class="phantom" href="https://github.com/phoenixr-codes">
-        <img class="icon" src="https://avatars.githubusercontent.com/u/99104369?v=4" alt="JDS" />
-      </a>
+      <a href="https://github.com/phoenixr-codes">PXR</a>
       and
       <a href="https://github.com/allay-mc/allay/graphs/contributors">You</a>
     </p>
+    <hr />
+    <p class="small">&copy; 2024 Jonas da Silva</p>
+    <p class="small">
+      NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG.
+    </p>
   </footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 
 </html>
